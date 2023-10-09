@@ -1,0 +1,177 @@
+/** Cairo Font */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*! Global Rules */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", Arial;
+}
+
+.link {
+  @apply text-sm hover:text-gold transition;
+}
+
+/** Main Code */
+
+body {
+  background-color: rgb(18, 18, 18);
+}
+
+/*! Sidebar */
+
+main {
+  @apply min-h-screen max-w-[1200px] mx-auto flex items-start my-[60px] gap-10;
+}
+
+main aside {
+  @apply relative min-w-[250px] bg-section-background py-4 border border-zinc-600 rounded-3xl transition-all duration-300;
+}
+
+main aside .contact-info {
+  @apply text-wheat max-w-[180px] mx-auto space-y-4;
+}
+
+main aside .contact-info .info {
+  @apply flex items-center text-wheat gap-6;
+}
+
+main aside .social-icons {
+  @apply flex items-center justify-between text-light-gold mt-8 max-w-[180px] mx-auto;
+}
+
+/*TODO Mobile Sidebar */
+@media screen and (max-width: 1250px) {
+  main {
+    @apply flex-col;
+  }
+
+  main aside {
+    @apply w-[950px] mx-auto px-6 overflow-hidden h-[330px];
+  }
+
+  main aside hr {
+    @apply !max-w-[100%] mx-6;
+  }
+
+  main aside .main-info {
+    @apply flex items-center m-0;
+  }
+
+  main aside .main-text-info {
+    @apply w-full;
+  }
+
+  main aside .main-text-info h1,
+  main aside .main-text-info h3 {
+    @apply text-start mx-0 transition-all;
+  }
+
+  main aside .main-info img {
+    @apply ml-0 mr-6;
+  }
+
+  main aside .contact-info {
+    @apply mr-0  max-w-full flex items-center flex-wrap gap-8;
+  }
+
+  main aside .contact-info .info {
+    @apply !flex-1;
+  }
+
+  main aside .social-icons {
+    @apply max-w-[250px];
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  main aside {
+    @apply w-[700px] mx-auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main aside {
+    @apply w-[520px] mx-auto h-[418px];
+  }
+}
+
+@media screen and (max-width: 579px) {
+  main aside {
+    @apply w-[calc(100%-1.5rem)] mx-auto;
+  }
+
+  main aside .main-text-info {
+    @apply mr-6;
+  }
+
+  main aside .main-text-info h1 {
+    @apply text-xl;
+  }
+
+  main aside .main-text-info h3 {
+    @apply text-xs max-w-[130px];
+  }
+}
+
+@media screen and (max-width: 440px) {
+  main aside {
+    @apply h-[506px];
+  }
+
+  main aside .main-info {
+    @apply flex-col;
+  }
+
+  main aside .main-info img {
+    @apply mr-0;
+  }
+
+  main aside .main-text-info {
+    @apply mx-auto;
+  }
+
+  main aside .main-text-info h1,
+  main aside .main-text-info h3 {
+    @apply mx-auto text-center text-2xl;
+  }
+
+  main aside .main-text-info h3 {
+    @apply text-sm max-w-[150px];
+  }
+
+  main aside #show-contacts span {
+    @apply hidden;
+  }
+
+  main aside #show-contacts svg {
+    @apply text-lg;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  main aside {
+    @apply h-[582px];
+  }
+}
+
+.gold-gradient {
+  background: linear-gradient(90deg, #feb824, #222, #222, #222);
+  @apply transition-all duration-500 hover:bg-opacity-0 z-[1];
+}
+
+.gold-gradient::after {
+  background: linear-gradient(-90deg, #feb824, #222, #222, #222);
+  @apply content-[''] absolute inset-0 rounded-tr-3xl
+    rounded-bl-3xl -z-[1] transition-all duration-500 opacity-0;
+}
+
+.gold-gradient:hover::after {
+  @apply opacity-100;
+}
