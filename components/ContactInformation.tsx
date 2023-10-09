@@ -12,7 +12,7 @@ const ContactInformation = () => {
             {alias}
           </Link>
         ) : title.toLowerCase() === "phone" ? (
-          <Link className="link" href={`mailto:${value}`}>
+          <Link className="link" href={`tel:${value}`}>
             {value}
           </Link>
         ) : (
