@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { contactInformation } from "@/constants";
-import { Info } from "@/types";
+import { InfoProps } from "@/types";
 
 const ContactInformation = () => {
   //TODO Display Email & Phone as Links and Location as a Normal Text
-  const information = ({ title, alias, value }: Info) => {
+  const information = ({ title, alias, value }: InfoProps) => {
     return (
       <>
         {title.toLowerCase() === "email" ? (

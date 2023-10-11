@@ -175,3 +175,21 @@ main aside .social-icons {
 .gold-gradient:hover::after {
   @apply opacity-100;
 }
+
+/*! Navbar */
+.nav-link {
+  @apply hover:text-light-gold transition duration-300 cursor-pointer capitalize;
+}
+
+.nav-active-link {
+  @apply text-light-gold;
+}
+
+/*! Components */
+.component {
+  @apply absolute inset-0 opacity-0 transition-all duration-300 text-wheat rounded-xl p-8 py-4 min-h-[515px] ease-out;
+}
+
+.active-component {
+  @apply !opacity-100 bg-section-background delay-[200ms];
+}
