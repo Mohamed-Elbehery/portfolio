@@ -15,7 +15,10 @@ const Navbar = ({ searchParams }: SearchParamsProps) => {
           onClick={handleClick}
           data-link="about"
           className={`${
-            (activeLink === "about" || query === "about") && "nav-active-link"
+            (activeLink === "about" ||
+              activeLink === "" ||
+              query === "about") &&
+            "nav-active-link"
           } nav-link`}
         >
           about

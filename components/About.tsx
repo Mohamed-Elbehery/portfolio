@@ -4,7 +4,8 @@ const About = ({ searchParams }: SearchParamsProps) => {
   return (
     <div
       className={`${
-        searchParams?.activeLink?.toLowerCase() === "about" &&
+        (searchParams?.activeLink?.toLowerCase() === "about" ||
+          searchParams?.activeLink === undefined) &&
         "active-component"
       } component`}
     >
