@@ -3,10 +3,11 @@ import { SearchParamsProps } from "@/types";
 const Contact = ({ searchParams }: SearchParamsProps) => {
   return (
     <div
-      className={`${
-        searchParams?.activeLink?.toLowerCase() === "contact" &&
-        "active-component"
-      } component`}
+      className={`component${
+        searchParams?.activeLink?.toLowerCase() === "contact"
+          ? " active-component"
+          : ""
+      }`}
     >
       <h1>Contact Component</h1>
     </div>

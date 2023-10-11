@@ -3,10 +3,11 @@ import { SearchParamsProps } from "@/types";
 const Portfolio = ({ searchParams }: SearchParamsProps) => {
   return (
     <div
-      className={`${
-        searchParams?.activeLink?.toLowerCase() === "portfolio" &&
-        "active-component"
-      } component`}
+      className={`component${
+        searchParams?.activeLink?.toLowerCase() === "portfolio"
+          ? " active-component"
+          : ""
+      }`}
     >
       <h1>Portfolio Component</h1>
     </div>

@@ -3,10 +3,11 @@ import { SearchParamsProps } from "@/types";
 const Resume = ({ searchParams }: SearchParamsProps) => {
   return (
     <div
-      className={`${
-        searchParams?.activeLink?.toLowerCase() === "resume" &&
-        "active-component"
-      } component`}
+      className={`component${
+        searchParams?.activeLink?.toLowerCase() === "resume"
+          ? " active-component"
+          : ""
+      }`}
     >
       <h1>Resume Component</h1>
     </div>

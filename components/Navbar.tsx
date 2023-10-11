@@ -4,7 +4,7 @@ import { SearchParamsProps } from "@/types";
 import useNavbar from "@/hooks/useNavbar";
 
 const Navbar = ({ searchParams }: SearchParamsProps) => {
-  const { activeLink, handleClick } = useNavbar();
+  const { activeLink, handleClick } = useNavbar(searchParams);
 
   const { activeLink: query } = searchParams;
 

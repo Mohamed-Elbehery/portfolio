@@ -1,9 +1,12 @@
 "use client";
+
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const useNavbar = () => {
-  const [activeLink, setActiveLink] = useState<string | undefined>("");
+const useNavbar = (searchParams: { activeLink: string | undefined }) => {
+  const [activeLink, setActiveLink] = useState<string | undefined>(
+    searchParams?.activeLink || ""
+  );
   const router = useRouter();
 
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
