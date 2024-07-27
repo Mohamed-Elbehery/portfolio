@@ -23,6 +23,8 @@ const Navbar = ({ searchParams }: SearchParamsProps) => {
                 ? setActiveLink("about")
                 : ""
             }`}
+            title={`${link} tab link`}
+            aria-label={`${link} tab link`}
           >
             {link}
           </li>
