@@ -17,6 +17,8 @@ const Sidebar = () => {
         id="show-contacts"
         onClick={() => setIsClicked(!isClicked)}
         className="text-gold text-sm absolute flex items-center gap-1 right-0 top-0 bg-[#2B2B2B] py-2 px-4 rounded-tr-3xl rounded-bl-3xl gold-gradient min-[1251px]:hidden"
+        title="Expand More and Expand Less Button, Click it to Show my Contact Info"
+        aria-label="Expand More and Expand Less Button, Click it to Show my Contact Info"
       >
         <span>Show Contacts</span>{" "}
         {!isClicked ? (

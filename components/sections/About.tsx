@@ -60,7 +60,7 @@ const About = ({ searchParams }: SearchParamsProps) => {
 
       {/* What I'm Doing */}
       <div className="mt-8 space-y-4">
-        <h2 className="text-2xl font-bold text-wheat">What I'm Doing</h2>
+        <h3 className="text-2xl font-bold text-wheat">What I'm Doing</h3>
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 text-grey">
           {services.map((service) => (
@@ -72,10 +72,10 @@ const About = ({ searchParams }: SearchParamsProps) => {
               <div>{<service.icon className="text-light-gold text-4xl" />}</div>
               {/* Content */}
               <div className="flex flex-col gap-y-2">
-                <span className="text-2xl font-bold text-wheat">
+                <h5 className="text-2xl font-bold text-wheat">
                   {service.title}
-                </span>
-                <span>{service.description}</span>
+                </h5>
+                <p>{service.description}</p>
               </div>
             </div>
           ))}
