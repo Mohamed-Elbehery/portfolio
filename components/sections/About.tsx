@@ -14,7 +14,7 @@ const About = ({ searchParams }: SearchParamsProps) => {
     >
       <SectionTitle title="About" />
 
-      <div className="descs text-grey space-y-5 text-lg leading-8 mb-8">
+      <div className="descs text-grey space-y-5 sm:text-lg leading-8 mb-8">
         <p>
           I’m a Front-End Developer passionate about bringing clients’ visions
           to life. Furthermore, I have managed many projects for a diverse
