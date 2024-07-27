@@ -33,11 +33,12 @@ const Resume = ({ searchParams }: SearchParamsProps) => {
 
         {/* Experience */}
         <ResumeCategory showLineProgress={true} Icon={SiReactivex} title="Experience">
+          <ResumeExp title="Cloud Engineer" date="July 2024 - Present 2024" description={"alx_africa (Internship)"} />
           <ResumeExp title="Frontend Developer" date="March 2024 - June 2024" description={"Mark & Success (Full-time)"} />
           <ResumeExp title="Frontend Developer" date="September 2023 - March 2024" description={"Rasid (Full-time)"} />
+          <ResumeExp title="Frontend Developer and Instructor" date="September 2023 - November 2023" description={"GDSC Core Technical (Part-time)"} />
           <ResumeExp title="Full-Stack Developer" date="January 2023 - October 2023" description={"AMIT-Learning (Internship)"} />
           <ResumeExp title="Frontend Developer" date="July 2023 - Aug 2023" description={"Information Technology Institute (ITI) - Internship"} />
-          <ResumeExp title="Frontend Developer and Instructor" date="September 2023 - November 2023" description={"GDSC Core Technical (Part-time)"} />
         </ResumeCategory>
       </div>
 
