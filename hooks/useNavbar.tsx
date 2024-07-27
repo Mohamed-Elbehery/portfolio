@@ -17,7 +17,7 @@ const useNavbar = (searchParams: { activeLink: string | undefined }) => {
     router.push(`/?activeLink=${activeLinkValue}`);
   };
 
-  return { activeLink, handleClick };
+  return { activeLink, setActiveLink, handleClick };
 };
 
 export default useNavbar;

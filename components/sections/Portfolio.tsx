@@ -1,16 +1,17 @@
 import { SearchParamsProps } from "@/types";
+import SectionTitle from "../SectionTitle";
 
 const Portfolio = ({ searchParams }: SearchParamsProps) => {
   return (
-    <div
+    <article
       className={`component${
         searchParams?.activeLink?.toLowerCase() === "portfolio"
           ? " active-component"
           : ""
       }`}
     >
-      <h1>Portfolio Component</h1>
-    </div>
+      <SectionTitle title="Portfolio" />
+    </article>
   );
 };
 

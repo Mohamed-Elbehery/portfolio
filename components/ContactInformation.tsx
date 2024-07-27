@@ -4,11 +4,11 @@ import { InfoProps } from "@/types";
 
 const ContactInformation = () => {
   //TODO Display Email & Phone as Links and Location as a Normal Text
-  const information = ({ title, alias, value }: InfoProps) => {
+  const information = ({ alias, value, title }: InfoProps) => {
     return (
       <>
         {title.toLowerCase() === "email" ? (
-          <Link className="link" href={"mailto:dev.elbehery@gmail.com"}>
+          <Link className="link" href={`mailto:${value}`}>
             {alias}
           </Link>
         ) : title.toLowerCase() === "phone" ? (
@@ -28,7 +28,7 @@ const ContactInformation = () => {
         <div className="info" key={title}>
           {/* Icon */}
           <span className="bg-gradient-to-b from-zinc-800 via-zinc-800 to-gray-700 rounded-full p-[6px]">
-            <Icon className="text-light-gold" />
+            <Icon size={25} className="text-light-gold" />
           </span>
           {/* Title & Info */}
           <div>

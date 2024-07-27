@@ -2,12 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ContactInformation from "./ContactInformation";
-import { personalPhoto } from "@/assets";
+import { personalPhoto } from "@/public/images";
 import { socialIcons } from "@/constants";
 import { useState } from "react";
+import { MdOutlineExpandLess, MdOutlineExpandMore } from "react-icons/md";
 
 const Sidebar = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -21,9 +20,9 @@ const Sidebar = () => {
       >
         <span>Show Contacts</span>{" "}
         {!isClicked ? (
-          <ExpandMoreIcon className="text-base" />
+          <MdOutlineExpandMore className="text-base" />
         ) : (
-          <ExpandLessIcon className="text-base" />
+          <MdOutlineExpandLess className="text-base" />
         )}
       </button>
       <div className="main-info">
@@ -33,7 +32,7 @@ const Sidebar = () => {
           width={125}
           height={125}
           alt="personal-photo"
-          className={`rounded-full mx-auto`}
+          className={`rounded-full mx-auto object-cover`}
         />
 
         <div className="main-text-info">
@@ -64,7 +63,7 @@ const Sidebar = () => {
             key={index}
             className="group bg-gradient-to-b from-zinc-800 via-zinc-800 to-gray-700 rounded-full p-[6px]"
           >
-            <Icon className="group-hover:text-gold transition" />
+            <Icon size={25} className="group-hover:text-gold transition" />
           </Link>
         ))}
       </div>

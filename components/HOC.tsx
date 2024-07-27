@@ -8,10 +8,10 @@ type Props = {
 
 const HOC = ({ children, searchParams }: Props) => {
   return (
-    <article className="relative flex-[6]">
+    <section className="relative flex-[6]">
       <Navbar searchParams={searchParams} />
       {children}
-    </article>
+    </section>
   );
 };
 

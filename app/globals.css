@@ -6,7 +6,6 @@
 @tailwind utilities;
 
 /*! Global Rules */
-
 * {
   margin: 0;
   padding: 0;
@@ -18,16 +17,16 @@
   @apply text-sm hover:text-gold transition;
 }
 
-/** Main Code */
-
 body {
   background-color: rgb(18, 18, 18);
+  min-height: 100vh;
 }
 
-/*! Sidebar */
+/** Main Code */
 
+/*! Sidebar */
 main {
-  @apply min-h-screen max-w-[1200px] mx-auto flex items-start my-[60px] gap-10;
+  @apply min-h-screen max-w-[1400px] mx-auto flex items-start my-[60px] gap-10;
 }
 
 main aside {
@@ -102,7 +101,7 @@ main aside .social-icons {
   }
 }
 
-@media screen and (max-width: 579px) {
+@media screen and (max-width: 580px) {
   main aside {
     @apply w-[calc(100%-1.5rem)] mx-auto;
   }
@@ -161,6 +160,7 @@ main aside .social-icons {
   }
 }
 
+/*TODO Linear Gradient Animation on Hover */
 .gold-gradient {
   background: linear-gradient(90deg, #feb824, #222, #222, #222);
   @apply transition-all duration-500 hover:bg-opacity-0 z-[1];
@@ -177,19 +177,85 @@ main aside .social-icons {
 }
 
 /*! Navbar */
-.nav-link {
+main section nav {
+  @apply absolute right-0 top-0 bg-[#282828] rounded-tr-xl rounded-bl-xl z-50 text-wheat;
+}
+
+main section nav .nav-link {
   @apply hover:text-light-gold transition duration-300 cursor-pointer capitalize;
 }
 
-.nav-active-link {
+main section nav .nav-active-link {
   @apply text-light-gold;
 }
 
+@media screen and (max-width: 767px) {
+  main section nav {
+    @apply fixed right-0 left-0 bottom-0 top-[calc(100%-56px)] rounded-tl-xl rounded-tr-xl rounded-none;
+  }
+
+  main section nav ul {
+    @apply justify-center flex-wrap !gap-6;
+  }
+}
+
+@media screen and (max-width: 407px) {
+  main section nav {
+    @apply fixed right-0 left-0 bottom-0 top-[calc(100%-56px)] rounded-tl-xl rounded-tr-xl rounded-none text-sm;
+  }
+}
+
+@media screen and (max-width: 382px) {
+  main section nav {
+    @apply fixed right-0 left-0 bottom-0 top-[calc(100%-96px)] rounded-tl-xl rounded-tr-xl rounded-none;
+  }
+}
+
 /*! Components */
-.component {
+main section {
+  @apply transition-all duration-300;
+}
+
+main section .component {
   @apply absolute inset-0 opacity-0 transition-all duration-300 text-wheat rounded-xl p-8 py-4 min-h-[515px] ease-out;
 }
 
-.active-component {
-  @apply !opacity-100 bg-section-background delay-[200ms];
+main section .component > h1 {
+  @apply mb-12;
+}
+
+main section .active-component {
+  @apply !opacity-100 bg-section-background delay-[200ms] h-max;
+}
+
+@media screen and (max-width: 1250px) {
+  main section {
+    @apply w-[950px] mx-auto;
+  }
+
+  main section .component {
+    @apply mb-8;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  main section {
+    @apply w-[700px] mx-auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main section {
+    @apply w-[520px] mx-auto;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  main section {
+    @apply w-[calc(100%-1.5rem)];
+  }
+
+  main section .component {
+    @apply px-4;
+  }
 }

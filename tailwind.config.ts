@@ -8,15 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundColor: {
+      colors: {
         "section-background": "#1C1C1C",
-      },
-      textColor: {
         "light-gold": "#FFCC66",
         "gold": "#FEB824",
         "wheat": "#F1E9DB",
         "grey": "#BDBDBD",
-      }
+      },
     },
   },
   plugins: [],

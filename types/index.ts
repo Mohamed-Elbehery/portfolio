@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export type InfoProps = {
   title: string;
   alias: string | undefined;
@@ -7,3 +9,10 @@ export type InfoProps = {
 export type SearchParamsProps = {
   searchParams: { activeLink: undefined | string };
 }
+
+//* Resume
+export type SkillType = {
+  Icon?: IconType;
+  skill: string;
+  src?: string;
+};
