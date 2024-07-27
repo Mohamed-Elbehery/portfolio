@@ -42,9 +42,9 @@ const Sidebar = () => {
           </h1>
 
           {/* Job Title */}
-          <h3 className="text-wheat !text-center text-sm bg-[#333333] max-w-[150px] mx-auto py-1 rounded-md">
+          <h2 className="text-wheat !text-center text-sm bg-[#333333] max-w-[150px] mx-auto py-1 rounded-md">
             Front-End Developer
-          </h3>
+          </h2>
         </div>
       </div>
 
@@ -56,12 +56,14 @@ const Sidebar = () => {
 
       {/* Social Icons */}
       <div className="social-icons">
-        {socialIcons.map(({ icon: Icon, href }, index) => (
+        {socialIcons.map(({ icon: Icon, href, title }, index) => (
           <Link
             href={href}
             target="_blank"
             key={index}
             className="group bg-gradient-to-b from-zinc-800 via-zinc-800 to-gray-700 rounded-full p-[6px]"
+            title={title}
+            aria-label={title}
           >
             <Icon size={25} className="group-hover:text-gold transition" />
           </Link>

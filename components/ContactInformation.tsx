@@ -33,7 +33,7 @@ const ContactInformation = () => {
           {/* Title & Info */}
           <div>
             {/* Title */}
-            <h4 className="text-[#808080] text-sm">{title.toUpperCase()}</h4>
+            <h4 className="text-grey text-sm">{title.toUpperCase()}</h4>
             {/* Info */}
             {information({ alias, value, title })}
           </div>

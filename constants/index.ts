@@ -32,14 +32,17 @@ export const socialIcons = [
   {
     icon: FaLinkedin,
     href: "https://www.linkedin.com/in/mohamed-elsharqawi/",
+    title: "Linkedin Link"
   },
   {
     icon: FaGithub,
     href: "https://github.com/Mohamed-Elbehery",
+    title:"Github Link"
   },
   {
     icon: FaWhatsapp,
     href: "https://api.whatsapp.com/send/?phone=201021141193",
+    title: "Whatsapp Link"
   },
 ];
 
