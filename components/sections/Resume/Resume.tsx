@@ -1,21 +1,21 @@
 import { SearchParamsProps, SkillType } from "@/types";
 import SectionTitle from "../../SectionTitle";
-import { FaGraduationCap} from "react-icons/fa";
+import { FaGraduationCap } from "react-icons/fa";
 import ResumeCategory from "./ResumeCategory";
 import ResumeExp from "./ResumeExp";
 import Image from "next/image";
 import { skills } from "@/constants";
 import { SiReactivex } from "react-icons/si";
+import cn from "@/utils/cn";
 
 const Resume = ({ searchParams }: SearchParamsProps) => {
   const educationDesc = () => <>Student at Computer Science and Information Department in Arab Open University in Egypt,<br />Bachelor of Computer Science</>
 
+  const isActive = searchParams?.activeLink?.toLowerCase() === "resume";
+
   return (
     <article
-      className={`component${searchParams?.activeLink?.toLowerCase() === "resume"
-        ? " active-component"
-        : " !h-0 !overflow-hidden"
-        }`}
+      className={cn("component", isActive ? "active-component" : "h-0 overflow-hidden")}
     >
       <SectionTitle title="Resume" />
 

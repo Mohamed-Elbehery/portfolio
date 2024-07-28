@@ -1,16 +1,14 @@
 import { experiences, services } from "@/constants";
 import { SearchParamsProps } from "@/types";
 import SectionTitle from "../SectionTitle";
+import cn from "@/utils/cn";
 
 const About = ({ searchParams }: SearchParamsProps) => {
+  const isActive = searchParams?.activeLink?.toLowerCase() === "about" || searchParams?.activeLink === undefined
+
   return (
     <article
-      className={`component${
-        searchParams?.activeLink?.toLowerCase() === "about" ||
-        searchParams?.activeLink === undefined
-          ? " active-component"
-          : ""
-      }`}
+      className={cn("component", isActive && "active-component")}
     >
       <SectionTitle title="About" />
 
