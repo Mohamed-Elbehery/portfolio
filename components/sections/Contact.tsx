@@ -7,7 +7,7 @@ const Contact = ({ searchParams }: SearchParamsProps) => {
       className={`component${
         searchParams?.activeLink?.toLowerCase() === "contact"
           ? " active-component"
-          : ""
+          : " !h-0 !overflow-hidden"
       }`}
     >
       <SectionTitle title="Contact" />

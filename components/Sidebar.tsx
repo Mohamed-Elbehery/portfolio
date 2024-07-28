@@ -12,7 +12,7 @@ const Sidebar = () => {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <aside className={`${!isClicked && "max-[1250px]:h-[157px]"}`}>
+    <aside className={`${!isClicked ? "max-[1250px]:h-[157px]" : ""}`}>
       <button
         id="show-contacts"
         onClick={() => setIsClicked(!isClicked)}

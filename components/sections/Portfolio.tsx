@@ -7,7 +7,7 @@ const Portfolio = ({ searchParams }: SearchParamsProps) => {
       className={`component${
         searchParams?.activeLink?.toLowerCase() === "portfolio"
           ? " active-component"
-          : ""
+          : " !h-0 !overflow-hidden"
       }`}
     >
       <SectionTitle title="Portfolio" />

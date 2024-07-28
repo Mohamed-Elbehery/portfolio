@@ -14,6 +14,10 @@
   @apply text-sm hover:text-gold transition;
 }
 
+html {
+  user-select: none;
+}
+
 body {
   background-color: rgb(18, 18, 18);
   min-height: 100vh;
@@ -49,7 +53,7 @@ main aside .social-icons {
   }
 
   main aside {
-    @apply w-[950px] mx-auto px-6 overflow-hidden h-[330px];
+    @apply w-[950px] mx-auto px-6 overflow-hidden h-[350px];
   }
 
   main aside hr {
@@ -94,7 +98,7 @@ main aside .social-icons {
 
 @media screen and (max-width: 767px) {
   main aside {
-    @apply w-[520px] mx-auto h-[418px];
+    @apply w-[520px] mx-auto h-[438px];
   }
 }
 
@@ -118,7 +122,7 @@ main aside .social-icons {
 
 @media screen and (max-width: 440px) {
   main aside {
-    @apply h-[506px];
+    @apply h-[526px];
   }
 
   main aside .main-info {
@@ -153,7 +157,7 @@ main aside .social-icons {
 
 @media screen and (max-width: 415px) {
   main aside {
-    @apply h-[582px];
+    @apply h-[602px];
   }
 }
 
@@ -217,7 +221,7 @@ main section .component {
   @apply absolute inset-0 opacity-0 transition-all duration-300 text-wheat rounded-xl p-8 py-4 min-h-[515px] ease-out;
 }
 
-main section .component > h1 {
+main section .component > h2 {
   @apply mb-12;
 }
 
@@ -254,5 +258,15 @@ main section .active-component {
 
   main section .component {
     @apply px-4;
+  }
+}
+
+/*TODO Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

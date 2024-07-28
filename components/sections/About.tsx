@@ -14,7 +14,7 @@ const About = ({ searchParams }: SearchParamsProps) => {
     >
       <SectionTitle title="About" />
 
-      <div className="descs text-grey space-y-5 sm:text-lg leading-8 mb-8">
+      <div className="descs text-grey space-y-5 text-sm sm:text-base leading-8 mb-8">
         <p>
           I’m a Front-End Developer passionate about bringing clients’ visions
           to life. Furthermore, I have managed many projects for a diverse
@@ -51,8 +51,8 @@ const About = ({ searchParams }: SearchParamsProps) => {
             <div>{<exp.icon className="text-light-gold text-4xl" />}</div>
             {/* Content */}
             <div className="flex flex-col gap-y-2">
-              <span className="text-2xl font-bold text-wheat">+{exp.num}</span>
-              <span className="font-bold w-20">{exp.title}</span>
+              <h5 className="text-xl font-bold text-wheat">+{exp.num}</h5>
+              <p className="font-bold text-sm w-full sm:w-20">{exp.title}</p>
             </div>
           </div>
         ))}
@@ -72,10 +72,10 @@ const About = ({ searchParams }: SearchParamsProps) => {
               <div>{<service.icon className="text-light-gold text-4xl" />}</div>
               {/* Content */}
               <div className="flex flex-col gap-y-2">
-                <h5 className="text-2xl font-bold text-wheat">
+                <h5 className="text-xl font-bold text-wheat">
                   {service.title}
                 </h5>
-                <p>{service.description}</p>
+                <p className="text-sm leading-6">{service.description}</p>
               </div>
             </div>
           ))}

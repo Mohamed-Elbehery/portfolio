@@ -14,7 +14,7 @@ const Resume = ({ searchParams }: SearchParamsProps) => {
     <article
       className={`component${searchParams?.activeLink?.toLowerCase() === "resume"
         ? " active-component"
-        : ""
+        : " !h-0 !overflow-hidden"
         }`}
     >
       <SectionTitle title="Resume" />
