@@ -212,6 +212,10 @@ main section nav .nav-active-link {
   main section nav {
     @apply fixed right-0 left-0 bottom-0 top-auto rounded-tl-xl rounded-tr-xl rounded-none;
   }
+
+  main section nav ul {
+    @apply !px-0;
+  }
 }
 
 /*! Components */
