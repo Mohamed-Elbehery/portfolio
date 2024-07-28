@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import ContactInformation from "./ContactInformation";
-import { personalPhoto } from "@/public/images";
 import { socialIcons } from "@/constants";
 import { useState } from "react";
 import { MdOutlineExpandLess, MdOutlineExpandMore } from "react-icons/md";
@@ -30,7 +29,7 @@ const Sidebar = () => {
       <div className="main-info">
         {/* Personal Photo */}
         <Image
-          src={personalPhoto}
+          src={"/images/personal_photo.jpeg"}
           width={125}
           height={125}
           alt="personal-photo"

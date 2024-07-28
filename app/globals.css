@@ -179,7 +179,7 @@ main aside .social-icons {
 
 /*! Navbar */
 main section nav {
-  @apply absolute right-0 top-0 bg-[#282828] rounded-tr-xl rounded-bl-xl z-50 text-wheat;
+  @apply absolute right-0 top-0 bg-[#282828] rounded-tr-xl rounded-bl-xl z-[9999] text-wheat;
 }
 
 main section nav .nav-link {
@@ -192,7 +192,7 @@ main section nav .nav-active-link {
 
 @media screen and (max-width: 767px) {
   main section nav {
-    @apply fixed right-0 left-0 bottom-0 top-[calc(100%-56px)] rounded-tl-xl rounded-tr-xl rounded-none;
+    @apply fixed right-0 left-0 bottom-0 top-auto  rounded-tl-xl rounded-tr-xl rounded-none;
   }
 
   main section nav ul {
@@ -202,13 +202,13 @@ main section nav .nav-active-link {
 
 @media screen and (max-width: 407px) {
   main section nav {
-    @apply fixed right-0 left-0 bottom-0 top-[calc(100%-56px)] rounded-tl-xl rounded-tr-xl rounded-none text-sm;
+    @apply fixed right-0 left-0 bottom-0 top-auto  rounded-tl-xl rounded-tr-xl rounded-none text-sm;
   }
 }
 
 @media screen and (max-width: 382px) {
   main section nav {
-    @apply fixed right-0 left-0 bottom-0 top-[calc(100%-96px)] rounded-tl-xl rounded-tr-xl rounded-none;
+    @apply fixed right-0 left-0 bottom-0 top-auto  rounded-tl-xl rounded-tr-xl rounded-none;
   }
 }
 
